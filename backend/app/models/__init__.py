@@ -1,6 +1,7 @@
 from .course import Course, CourseBase, Tag, TagBase, Review, ReviewBase, CourseTagLink
 from .enrollment import Enrollment, EnrollmentBase
 from .user import User, UserBase
+from .curriculum import Section, SectionBase, Lecture, LectureBase
 
 __all__ = [
     "User",
@@ -14,4 +15,8 @@ __all__ = [
     "CourseTagLink",
     "Enrollment",
     "EnrollmentBase",
+    "Section",
+    "SectionBase",
+    "Lecture",
+    "LectureBase",
 ]
