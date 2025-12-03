@@ -5,6 +5,7 @@ from sqlmodel import Field, SQLModel, Relationship
 
 if TYPE_CHECKING:
     from .user import User
+    from .curriculum import Section
 
 
 class CourseTagLink(SQLModel, table=True):
@@ -64,3 +65,4 @@ class Course(CourseBase, table=True):
     instructor: Optional["User"] = Relationship()
     tags: List[Tag] = Relationship(back_populates="courses", link_model=CourseTagLink)
     reviews: List[Review] = Relationship(back_populates="course")
+    sections: List["Section"] = Relationship(back_populates="course")
